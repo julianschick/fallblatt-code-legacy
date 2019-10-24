@@ -2,16 +2,14 @@
 
 Veralteter Code zur Steuerung von Fallblattanzeigen der Deutschen Bahn für ESP32-Mikrocontroller bzw. Android-Geräte.
 
-## Code
+## ESP32
+Der Code im Ordner /esp32 in diesem Repository ist für die ESP32-Plattform und steuert ein Fallblattmodul mit Hilfe der oben beschriebenen Pins an. Der Microcontroller unterstützt WLAN und Bluetooth, das Fallblattmodul kann per Bluetooth oder durch das Senden von HTTP-Requests an einen Webserver auf dem Controller angesteuert werden.
 
-### ESP32
-Der Code im Ordner /esp in diesem Repository ist für die ESP32-Plattform und steuert ein Fallblattmodul mit Hilfe der oben beschriebenen Pins an. Der Microcontroller unterstützt WLAN und Bluetooth, das Fallblattmodul kann per Bluetooth oder durch das Senden von HTTP-Requests an einen Webserver auf dem Controller angesteuert werden.
-
-### Android
+## Android
 Unter /android liegt eine App, die das Modul über seine serielle Bluetooth-Schnittstelle kontaktiert und fernsteuert.
 
-### Befehle
-#### Bluetooth (serielle Schnittstelle)
+## Befehle
+### Bluetooth (serielle Schnittstelle)
 
 Befehl | Bedeutung | Antwort
 ------------ | ------- | ------
@@ -32,7 +30,7 @@ Der Pull-Modus holt sich eine Textdatei von einem Server und parst diese. Es wir
 lediglich eine Zahl steht, die das anzusteuernde Blatt angibt. Möchte man z. B. von http://testserver.to/test.php das anzusteuernde Blatt holen, so setzt man [SRV] = testserver.to und [ADR] = /test.php
 
   
-#### HTTP-Server
+### HTTP-Server
 
 Seitenaufruf (GET) | Bedeutung
 ------------ | -------------
